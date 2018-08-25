@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GerenMov - Movimentações{% endblock %}
+
+{% block body %}
+    <h1>Nova Movimentação</h1>
+
+    {{ include('movimentos/_form.html.twig') }}
+
+    <a href="{{ path('movimentos_index') }}" class="btn btn-primary">Voltar</a>
+{% endblock %}

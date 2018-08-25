@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GerenMov - Funcionario{% endblock %}
+
+{% block body %}
+    <h1>Funcionários</h1>
+
+    <table class="table table-striped table-hover" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for funcionario in funcionarios %}
+            <tr>
+                <td>{{ funcionario.id }}</td>
+                <td>{{ funcionario.nomeStr }}</td>
+                <td>
+                    <a href="{{ path('funcionario_show', {'id': funcionario.id}) }}" class="btn btn-dark">Mostrar</a>
+                    <a href="{{ path('funcionario_edit', {'id': funcionario.id}) }}" class="btn btn-light">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Nenhum registro encontrado.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('funcionario_new') }}" class="btn btn-primary">Criar Novo</a>
+{% endblock %}

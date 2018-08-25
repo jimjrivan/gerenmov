@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GerenvMov - Movimentações{% endblock %}
+
+{% block body %}
+    <h1>Editar Movimentação</h1>
+
+    {{ include('movimentos/_form.html.twig', {'button_label': 'Confirmar'}) }}
+
+    <a href="{{ path('movimentos_index') }}" class="btn btn-primary">Voltar</a>
+
+    {{ include('movimentos/_delete_form.html.twig') }}
+{% endblock %}

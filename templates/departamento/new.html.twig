@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GerenMov - Departamento{% endblock %}
+
+{% block body %}
+    <h1>Novo Departamento</h1>
+
+    {{ include('departamento/_form.html.twig') }}
+
+    <a href="{{ path('departamento_index') }}" class="btn btn-primary">Voltar</a>
+{% endblock %}

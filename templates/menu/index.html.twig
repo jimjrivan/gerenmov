@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Menu de acesso</h1>
+    <ul>
+        <li><a href="/funcionario">Funcionários</a></li>
+        <li><a href="/departamento">Departamentos</a></li>
+        <li><a href="/movimentos">Movimentações</a></li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GerenMov - Funcionário{% endblock %}
+
+{% block body %}
+    <h1>Novo Funcionário</h1>
+
+    {{ include('funcionario/_form.html.twig') }}
+
+    <a href="{{ path('funcionario_index') }}" class="btn btn-primary">Voltar</a>
+{% endblock %}

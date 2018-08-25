@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GerenMov - Movimentações{% endblock %}
+
+{% block body %}
+    <h1>Movimentações</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ movimento.id }}</td>
+            </tr>
+            <tr>
+                <th>Descrição</th>
+                <td>{{ movimento.descricaoStr }}</td>
+            </tr>
+            <tr>
+                <th>Valor</th>
+                <td>{{ movimento.valorNum }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('movimentos_index') }}" class="btn btn-primary">Voltar</a>
+
+    <a href="{{ path('movimentos_edit', {'id': movimento.id}) }}" class="btn btn-light">Editar</a>
+
+    {{ include('movimentos/_delete_form.html.twig') }}
+{% endblock %}
